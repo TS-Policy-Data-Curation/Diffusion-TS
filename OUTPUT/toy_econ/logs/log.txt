@@ -1,0 +1,6 @@
+2025-01-08-22-31: {'overall': {'trainable': '284.66K', 'non_trainable': '0', 'total': '284.66K'}, 'model': {'trainable': '284.66K', 'non_trainable': '0', 'total': '284.66K'}}
+2025-01-08-22-31: toy_econ: start training...
+2025-01-08-22-46: Training done, time: 950.52
+2025-01-09-01-07: {'overall': {'trainable': '284.66K', 'non_trainable': '0', 'total': '284.66K'}, 'model': {'trainable': '284.66K', 'non_trainable': '0', 'total': '284.66K'}}
+2025-01-09-01-07: Begin to restore...
+2025-01-09-01-07: Imputation done, time: 9.12

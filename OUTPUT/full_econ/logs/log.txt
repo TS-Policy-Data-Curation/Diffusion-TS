@@ -1,0 +1,6 @@
+2025-01-09-02-52: {'overall': {'trainable': '281.22K', 'non_trainable': '0', 'total': '281.22K'}, 'model': {'trainable': '281.22K', 'non_trainable': '0', 'total': '281.22K'}}
+2025-01-09-02-52: full_econ: start training...
+2025-01-09-03-08: Training done, time: 938.74
+2025-01-09-03-19: {'overall': {'trainable': '281.22K', 'non_trainable': '0', 'total': '281.22K'}, 'model': {'trainable': '281.22K', 'non_trainable': '0', 'total': '281.22K'}}
+2025-01-09-03-19: Begin to sample...
+2025-01-09-03-19: Sampling done, time: 8.70

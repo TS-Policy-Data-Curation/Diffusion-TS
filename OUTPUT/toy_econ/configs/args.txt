@@ -1,0 +1,40 @@
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'toy_econ', '--config_file', './Config/macroecon.yaml', '--gpu', '0', '--train']
+==> args:
+  config_file: ./Config/macroecon.yaml
+  cudnn_deterministic: False
+  gpu: 0
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: toy_econ
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/toy_econ
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'toy_econ', '--config_file', './Config/macroecon.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'infill', '--missing_ratio', '0.93']
+==> args:
+  config_file: ./Config/macroecon.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.93
+  mode: infill
+  name: toy_econ
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  save_dir: OUTPUT/toy_econ
+  seed: 12345
+  tensorboard: False
+  train: False

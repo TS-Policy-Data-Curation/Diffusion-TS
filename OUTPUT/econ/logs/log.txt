@@ -9,3 +9,9 @@
 2025-01-08-05-53: {'overall': {'trainable': '279.92K', 'non_trainable': '0', 'total': '279.92K'}, 'model': {'trainable': '279.92K', 'non_trainable': '0', 'total': '279.92K'}}
 2025-01-08-05-53: econ: start training...
 2025-01-08-06-08: Training done, time: 906.49
+2025-01-08-21-17: {'overall': {'trainable': '279.92K', 'non_trainable': '0', 'total': '279.92K'}, 'model': {'trainable': '279.92K', 'non_trainable': '0', 'total': '279.92K'}}
+2025-01-08-21-17: Begin to restore...
+2025-01-08-21-17: Imputation done, time: 11.32
+2025-01-08-21-47: {'overall': {'trainable': '279.92K', 'non_trainable': '0', 'total': '279.92K'}, 'model': {'trainable': '279.92K', 'non_trainable': '0', 'total': '279.92K'}}
+2025-01-08-21-47: Begin to restore...
+2025-01-08-21-47: Imputation done, time: 10.93

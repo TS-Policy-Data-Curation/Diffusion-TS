@@ -130,7 +130,7 @@ class CustomDataset(Dataset):
     def read_data(filepath, name=''):
         """Reads a single .csv
         """
-        df = pd.read_csv(filepath, header=0)
+        df = pd.read_csv(filepath, header=0) #will skip the first row b/c that is read as the headers
         if name == 'etth':
             df.drop(df.columns[0], axis=1, inplace=True)
         data = df.values

@@ -98,3 +98,43 @@
   seed: 12345
   tensorboard: False
   train: True
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'econ', '--config_file', './Config/econ.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'infill', '--missing_ratio', '0.93']
+==> args:
+  config_file: ./Config/econ.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.93
+  mode: infill
+  name: econ
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  save_dir: OUTPUT/econ
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'econ', '--config_file', './Config/econ.yaml', '--gpu', '1', '--sample', '1', '--milestone', '10', '--mode', 'infill', '--missing_ratio', '0.93']
+==> args:
+  config_file: ./Config/econ.yaml
+  cudnn_deterministic: False
+  gpu: 1
+  milestone: 10
+  missing_ratio: 0.93
+  mode: infill
+  name: econ
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 1
+  save_dir: OUTPUT/econ
+  seed: 12345
+  tensorboard: False
+  train: False
