@@ -51,7 +51,7 @@ class Diffusion_TS(nn.Module):
             resid_pd=0.,
             kernel_size=None,
             padding_size=None,
-            use_ff=True,
+            use_ff=False,
             reg_weight=None,
             **kwargs
     ):
