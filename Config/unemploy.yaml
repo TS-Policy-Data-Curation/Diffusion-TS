@@ -1,0 +1,75 @@
+model:
+  target: Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS
+  params:
+    seq_length: 12  # 12 months
+    feature_size: 1
+    n_layer_enc: 3  # Increased depth
+    n_layer_dec: 3  # Increased depth
+    d_model: 128  # Increased model size for better representation
+    timesteps: 1000  # More diffusion steps for better quality
+    sampling_timesteps: 500
+    loss_type: 'l2'  # Switch to L2 for better stability
+    beta_schedule: 'linear'  # Try linear instead of cosine for better noise control
+    n_heads: 8  # More attention heads for better feature extraction
+    mlp_hidden_times: 4
+    attn_pd: 0.1  # Small dropout to improve generalization
+    resid_pd: 0.1
+    kernel_size: 3  # Increase for better convolutional context
+    padding_size: 1
+
+solver:
+  base_lr: 5.0e-5  # Increased for faster convergence
+  max_epochs: 20000  # More training epochs for better performance
+  results_folder: ./Checkpoints_unemployment
+  gradient_accumulate_every: 4  # Increase batch updates before backprop
+  save_cycle: 2000  # Adjust to save more often
+  ema:
+    decay: 0.999  # Slightly slower decay for more stable updates
+    update_interval: 5  # More frequent updates
+
+  scheduler:
+    target: engine.lr_sch.ReduceLROnPlateauWithWarmup
+    params:
+      factor: 0.5
+      patience: 1000  # Reduce patience to adapt faster
+      min_lr: 1.0e-6  # Allow lower learning rates for fine-tuning
+      threshold: 5.0e-2  # Reduce threshold for earlier LR changes
+      threshold_mode: rel
+      warmup_lr: 1.0e-3  # Start higher to improve initial training
+      warmup: 1000  # Longer warmup
+      verbose: True
+
+dataloader:
+  train_dataset:
+    target: Utils.Data_utils.real_datasets.CustomDataset
+    params:
+      name: unemployment_missing
+      proportion: 1.0
+      data_root: ./Data/datasets/unemployment.csv
+      window: 12
+      save2npy: True
+      neg_one_to_one: True
+      seed: 123
+      period: train
+
+  test_dataset:
+    target: Utils.Data_utils.real_datasets.CustomDataset
+    params:
+      name: unemployment_missing
+      proportion: 1.0  # Use full test set
+      data_root: ./Data/datasets/unemployment.csv
+      window: 12
+      save2npy: True
+      neg_one_to_one: True
+      seed: 123
+      period: test
+      style: combined  # Change from separate to combined for consistency
+      distribution: normal  # Normal distribution instead of geometric for better balance
+    coefficient: 5.0e-2  # Adjust for better diffusion
+    step_size: 1.0e-2  # More frequent updates
+    sampling_steps: 500  # More refined sampling
+
+  batch_size: 64  # Increase for better stability
+  sample_size: 256  # Generate more samples
+  shuffle: True
+
